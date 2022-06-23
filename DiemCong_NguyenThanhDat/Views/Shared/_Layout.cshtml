@@ -33,12 +33,13 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>New &copy; @DateTime.Now.Year - Nguyễn Thanh Đạt</p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    @RenderSection("upload", required: false)
 </body>
 </html>

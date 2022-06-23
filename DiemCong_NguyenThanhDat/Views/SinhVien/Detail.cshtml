@@ -1,0 +1,67 @@
+﻿@model DiemCong_NguyenThanhDat.Models.SinhVien
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thông Tin Chi Tiết</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            Mã sinh viên:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSV)
+        </dd>
+
+        <dt>
+            Họ tên:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            Giới tính:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioiTinh)
+        </dd>
+
+        <dt>
+            Ngày sinh:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgaySinh)
+        </dd>
+
+        <dt>
+            Hình:
+        </dt>
+
+        <dd>
+            <td>
+                <img src="@Model.Hinh" alt="hinh thumbnail" width="250px" />
+            </td>
+        </dd>
+
+        <dt>
+            Mã ngành:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaNganh)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSV }) |
+    @Html.ActionLink("Back to List", "ListSinhVien")
+</p>
